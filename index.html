@@ -35,8 +35,7 @@
 
     body::before {
       content: '';
-      position: fixed;
-      inset: 0;
+      position: fixed; inset: 0;
       background-image:
         radial-gradient(2px 2px at  8% 12%, rgba(252,20,132,.15) 0%, transparent 100%),
         radial-gradient(2px 2px at 23% 42%, rgba(252,20,132,.10) 0%, transparent 100%),
@@ -48,488 +47,331 @@
         radial-gradient(2px 2px at 54% 82%, rgba(252,20,132,.10) 0%, transparent 100%),
         radial-gradient(2px 2px at 76% 91%, rgba(252,20,132,.08) 0%, transparent 100%),
         radial-gradient(2px 2px at 33% 58%, rgba(252,20,132,.06) 0%, transparent 100%);
-      pointer-events: none;
-      z-index: 0;
+      pointer-events: none; z-index: 0;
     }
 
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
     section { position: relative; z-index: 1; }
 
-    .container { max-width: 900px;  margin: 0 auto; padding: 0 24px; }
-    .wide      { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .section   { padding: 72px 0; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .section   { padding: 52px 0; }
 
     /* ── BOTONES ── */
     .btn-primary {
-      display: inline-block;
-      background: var(--gold);
-      color: #fff;
-      padding: 14px 40px;
-      font-size: .78rem;
-      font-weight: 600;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 100px;
-      transition: all .2s;
+      display: inline-block; background: var(--gold); color: #fff;
+      padding: 13px 36px; font-size: .78rem; font-weight: 600;
+      letter-spacing: .07em; text-transform: uppercase;
+      text-decoration: none; border-radius: 100px; transition: all .2s;
     }
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
 
-    .btn-outline {
-      display: inline-block;
-      border: 1.5px solid var(--gold);
-      color: var(--gold);
-      padding: 13px 36px;
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 100px;
-      transition: all .2s;
-    }
-    .btn-outline:hover { background: rgba(252,20,132,.1); }
-
-    /* ── ETIQUETAS DE SECCIÓN ── */
+    /* ── ETIQUETAS ── */
     .section-label {
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-      display: block;
+      font-size: .68rem; font-weight: 600; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 8px; display: block;
     }
     .section-title {
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: .03em;
-      margin-bottom: 16px;
-    }
-    .section-intro {
-      font-size: .92rem;
-      color: var(--muted);
-      max-width: 560px;
-      margin-bottom: 40px;
-      line-height: 1.75;
-      font-weight: 300;
+      font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 700;
+      line-height: 1.2; letter-spacing: .03em; margin-bottom: 20px;
     }
 
     /* ── HERO ── */
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 24px 72px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center;
+      padding: 36px 24px 44px;
       background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%);
     }
     .hero-logo {
-      width: 100px;
-      border-radius: 50%;
-      margin-bottom: 28px;
-      border: 2px solid rgba(253,124,186,.4);
+      width: 56px; height: 56px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      margin-bottom: 14px;
+      border: 2px solid rgba(253,124,186,.5);
+      box-shadow: 0 4px 16px rgba(0,0,0,.3);
     }
     .cards-hero {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      height: 180px;
-      position: relative;
-      margin-bottom: 40px;
+      display: flex; justify-content: center; align-items: flex-end;
+      height: 120px; position: relative; margin-bottom: 20px;
     }
     .cards-hero .carta {
-      width: 90px; height: 136px;
-      border-radius: 10px; overflow: hidden;
+      width: 64px; height: 96px; border-radius: 7px; overflow: hidden;
       border: 2px solid rgba(253,124,186,.45);
-      box-shadow: 0 12px 40px rgba(0,0,0,.45);
-      position: absolute; bottom: 0;
+      box-shadow: 0 6px 22px rgba(0,0,0,.45); position: absolute; bottom: 0;
     }
     .cards-hero .carta img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-    .cards-hero .carta:nth-child(1) { left: 50%; margin-left: -130px; transform: rotate(-11deg) translateY(10px); z-index: 1; }
-    .cards-hero .carta:nth-child(2) { left: 50%; margin-left: -45px;  transform: rotate(0deg); z-index: 3; }
-    .cards-hero .carta:nth-child(3) { left: 50%; margin-left: 40px;   transform: rotate(10deg) translateY(10px); z-index: 2; }
+    .cards-hero .carta:nth-child(1) { left: 50%; margin-left: -92px; transform: rotate(-11deg) translateY(7px); z-index: 1; }
+    .cards-hero .carta:nth-child(2) { left: 50%; margin-left: -32px; transform: rotate(0deg); z-index: 3; }
+    .cards-hero .carta:nth-child(3) { left: 50%; margin-left: 28px;  transform: rotate(10deg) translateY(7px); z-index: 2; }
 
     .hero-eyebrow {
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .25em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: 14px;
+      font-size: .66rem; font-weight: 600; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--gold-light); margin-bottom: 8px;
     }
     .hero h1 {
       font-family: 'League Spartan', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      font-weight: 700;
-      letter-spacing: .04em;
-      line-height: 1.1;
-      text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 10px;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 700; letter-spacing: .04em; line-height: 1.1;
+      text-transform: uppercase; color: #fff; margin-bottom: 8px;
     }
     .hero h1 span { color: var(--gold-light); }
     .hero-subtitle {
-      font-size: .95rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.75);
-      letter-spacing: .03em;
-      margin-bottom: 10px;
-      max-width: 500px;
+      font-size: .85rem; font-weight: 300;
+      color: rgba(255,255,255,.75); max-width: 440px; margin-bottom: 8px;
     }
     .hero-badges {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 18px 0 32px;
+      display: flex; gap: 7px; justify-content: center;
+      flex-wrap: wrap; margin: 12px 0 22px;
     }
     .hero-badge {
-      background: rgba(252,20,132,.2);
-      border: 1px solid rgba(253,124,186,.5);
-      border-radius: 100px;
-      padding: 6px 18px;
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: #fff;
+      background: rgba(252,20,132,.2); border: 1px solid rgba(253,124,186,.5);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: .63rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: #fff;
     }
 
     /* ── PARA QUIÉN ── */
     #para-quien { background: var(--bg); }
     .bullets {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 14px;
-      margin-top: 8px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
     }
     .bullet-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 18px 20px;
-      border: 1px solid rgba(252,20,132,.3);
-      border-radius: 14px;
-      background: rgba(252,20,132,.03);
-      transition: border-color .2s, box-shadow .2s;
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 16px; border: 1px solid rgba(252,20,132,.25);
+      border-radius: 12px; background: rgba(252,20,132,.03);
+      transition: border-color .2s;
     }
-    .bullet-item:hover { border-color: rgba(252,20,132,.55); box-shadow: 0 4px 16px rgba(27,19,83,.07); }
-    .bullet-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
-    .bullet-text { font-size: .93rem; font-weight: 600; color: var(--cream); line-height: 1.5; }
+    .bullet-item:hover { border-color: rgba(252,20,132,.5); }
+    .bullet-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+    .bullet-text { font-size: .86rem; font-weight: 600; color: var(--cream); line-height: 1.45; }
 
-    /* ── QUÉ VAS A LOGRAR ── */
-    #logros { background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%); }
-    #logros .section-label { color: var(--gold-light); }
-    #logros .section-title { color: #fff; }
-    .logros-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-top: 8px;
+    /* ── LOGROS + INCLUYE COMBINADOS ── */
+    #logros-incluye { background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%); }
+    #logros-incluye .section-label { color: var(--gold-light); }
+    #logros-incluye .section-title { color: #fff; }
+    .dos-cols {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 4px;
     }
-    .logro {
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(253,124,186,.25);
-      border-radius: 14px;
-      padding: 26px 22px;
-      transition: border-color .2s, background .2s;
+    .col-bloque h3 {
+      font-size: .72rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold-light);
+      margin-bottom: 14px; padding-bottom: 10px;
+      border-bottom: 1px solid rgba(253,124,186,.3);
     }
-    .logro:hover { border-color: rgba(253,124,186,.55); background: rgba(255,255,255,.1); }
-    .logro .ico { font-size: 1.8rem; margin-bottom: 12px; }
-    .logro h3 { font-size: .9rem; font-weight: 700; color: var(--gold-light); margin-bottom: 8px; letter-spacing: .03em; }
-    .logro p  { font-size: .85rem; color: rgba(255,255,255,.7); line-height: 1.65; }
+    .col-lista { list-style: none; }
+    .col-lista li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.07);
+      font-size: .87rem; color: rgba(255,255,255,.82); line-height: 1.5;
+    }
+    .col-lista li:last-child { border-bottom: none; }
+    .col-lista li::before { content: '✦'; color: var(--gold); font-size: .5rem; flex-shrink: 0; margin-top: 5px; }
 
     /* ── TESTIMONIOS ── */
     #testimonios { background: var(--bg2); }
     .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 8px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px; margin-top: 4px;
     }
     .testi {
-      background: var(--bg);
-      border: 1px solid rgba(252,20,132,.3);
-      border-radius: 16px;
-      padding: 28px 24px;
-      box-shadow: 0 2px 14px rgba(27,19,83,.07);
+      background: var(--bg); border: 1px solid rgba(252,20,132,.25);
+      border-radius: 14px; padding: 22px 20px;
+      box-shadow: 0 2px 10px rgba(27,19,83,.06);
       transition: border-color .2s;
     }
-    .testi:hover { border-color: rgba(252,20,132,.55); }
-    .testi-quote { font-size: 2.8rem; color: var(--gold-light); line-height: 1; margin-bottom: 6px; font-family: Georgia, serif; }
-    .testi p { font-size: .93rem; color: var(--muted); font-style: italic; line-height: 1.7; }
-    .testi .author { margin-top: 14px; font-weight: 700; color: var(--cream); font-size: .82rem; letter-spacing: .04em; }
-    .testi .stars  { color: var(--gold); font-size: .85rem; margin-top: 4px; }
-
-    /* ── QUÉ INCLUYE ── */
-    #incluye { background: rgba(162,162,196,.12); }
-    .incluye-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
-      margin-top: 8px;
-    }
-    .incluye-item {
-      background: var(--bg);
-      border: 1px solid rgba(252,20,132,.25);
-      border-radius: 14px;
-      padding: 24px 18px;
-      text-align: center;
-      transition: border-color .2s, transform .2s;
-    }
-    .incluye-item:hover { border-color: rgba(252,20,132,.55); transform: translateY(-3px); }
-    .incluye-item .ico { font-size: 2rem; margin-bottom: 10px; display: block; }
-    .incluye-item h3 { font-size: .88rem; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
-    .incluye-item p  { font-size: .82rem; color: var(--muted); line-height: 1.6; }
-
-    /* ── GALERÍA ── */
-    #galeria { background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%); }
-    #galeria .section-label { color: var(--gold-light); }
-    #galeria .section-title { color: #fff; }
-    #galeria .section-intro { color: rgba(255,255,255,.65); }
-    .galeria-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .gcarta {
-      width: 110px;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 2px solid rgba(253,124,186,.35);
-      box-shadow: 0 8px 28px rgba(0,0,0,.4);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .gcarta:hover { transform: translateY(-8px) scale(1.04); box-shadow: 0 16px 40px rgba(252,20,132,.3); }
-    .gcarta img { width: 100%; display: block; }
-
-    /* ── SOBRE MÍ ── */
-    #sobre-mi { background: var(--bg); }
-    .sobre-inner {
-      display: flex;
-      gap: 48px;
-      align-items: flex-start;
-      margin-top: 8px;
-    }
-    .sobre-foto {
-      width: 200px;
-      height: 260px;
-      border-radius: 16px;
-      object-fit: cover;
-      object-position: center top;
-      flex-shrink: 0;
-      box-shadow: 0 8px 32px rgba(27,19,83,.15);
-      border: 2px solid var(--border);
-    }
-    .sobre-texto h3 { font-size: 1.5rem; color: var(--cream); margin-bottom: 14px; }
-    .sobre-texto p  { font-size: .93rem; color: var(--muted); margin-bottom: 12px; line-height: 1.75; }
-    .sobre-quote {
-      display: block;
-      margin-top: 16px;
-      background: var(--bg2);
-      border-left: 3px solid var(--gold);
-      padding: 14px 18px;
-      border-radius: 0 10px 10px 0;
-      color: var(--cream);
-      font-style: italic;
-      font-size: .9rem;
-    }
-    .social-links { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--bg2);
-      color: var(--cream);
-      border-radius: 100px;
-      padding: 6px 16px;
-      font-size: .78rem;
-      font-weight: 600;
-      letter-spacing: .05em;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      transition: background .2s, color .2s;
-    }
-    .social-links a:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .testi:hover { border-color: rgba(252,20,132,.5); }
+    .testi-quote { font-size: 2.4rem; color: var(--gold-light); line-height: 1; margin-bottom: 4px; font-family: Georgia, serif; }
+    .testi p { font-size: .88rem; color: var(--muted); font-style: italic; line-height: 1.65; }
+    .testi .author { margin-top: 12px; font-weight: 700; color: var(--cream); font-size: .78rem; letter-spacing: .04em; }
+    .testi .stars  { color: var(--gold); font-size: .8rem; margin-top: 3px; }
 
     /* ── PRECIO ── */
     #precio { background: linear-gradient(160deg, var(--bg2) 0%, rgba(252,20,132,.08) 100%); }
-    .precio-card-wrap { display: flex; justify-content: center; margin-bottom: 32px; }
+    .precio-card-wrap { display: flex; justify-content: center; margin-bottom: 24px; }
     .precio-card {
-      max-width: 500px; width: 100%;
-      border: 2px solid var(--gold);
-      border-radius: 20px;
-      padding: 52px 40px 40px;
-      position: relative;
-      background: #fff;
-      box-shadow: 0 8px 32px rgba(27,19,83,.1);
+      max-width: 460px; width: 100%;
+      border: 2px solid var(--gold); border-radius: 18px;
+      padding: 48px 36px 36px; position: relative;
+      background: #fff; box-shadow: 0 8px 28px rgba(27,19,83,.1);
       text-align: center;
     }
     .precio-badge {
-      position: absolute; top: -14px; left: 50%;
-      transform: translateX(-50%);
+      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
       background: var(--gold); color: #fff;
-      font-size: .68rem; font-weight: 700;
-      letter-spacing: .12em; text-transform: uppercase;
-      padding: 5px 20px; border-radius: 2px;
-      white-space: nowrap;
+      font-size: .65rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: 4px 18px; border-radius: 2px; white-space: nowrap;
     }
     .precio-eyebrow-green {
       display: inline-flex; align-items: center; gap: 6px;
       background: rgba(37,180,100,.1); border: 1px solid rgba(37,180,100,.3);
       border-radius: 100px; color: #1a9e5c;
-      font-size: .72rem; font-weight: 700; letter-spacing: .08em;
-      text-transform: uppercase; padding: 4px 14px; margin-bottom: 14px;
+      font-size: .68rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; padding: 3px 12px; margin-bottom: 10px;
     }
     .precio-amount {
       font-family: 'League Spartan', sans-serif;
-      font-size: clamp(3.2rem, 8vw, 5rem);
+      font-size: clamp(2.8rem, 7vw, 4.2rem);
       font-weight: 600; color: var(--cream); line-height: 1;
     }
-    .precio-currency { font-size: .82rem; color: var(--muted); margin-bottom: 28px; letter-spacing: .1em; }
-    .otros-pagos {
-      border-top: 1px solid rgba(252,20,132,.2);
-      padding-top: 20px; margin-bottom: 28px;
-    }
+    .precio-currency { font-size: .78rem; color: var(--muted); margin-bottom: 22px; letter-spacing: .08em; }
+    .otros-pagos { border-top: 1px solid rgba(252,20,132,.2); padding-top: 16px; margin-bottom: 20px; }
     .otros-pagos-titulo {
-      font-size: .65rem; font-weight: 700;
-      letter-spacing: .18em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 14px;
+      font-size: .62rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
     }
     .pago-row {
       display: flex; align-items: center; gap: 10px;
-      padding: 10px 14px; border-radius: 10px;
-      border: 1px solid rgba(252,20,132,.15);
-      margin-bottom: 8px;
+      padding: 9px 12px; border-radius: 9px;
+      border: 1px solid rgba(252,20,132,.15); margin-bottom: 7px;
     }
     .pago-row:last-child { margin-bottom: 0; }
-    .pago-row-icon { font-size: 1.1rem; flex-shrink: 0; }
-    .pago-row-metodo { font-size: .82rem; font-weight: 600; color: var(--cream); flex: 1; text-align: left; }
-    .pago-row-precio { font-size: .88rem; font-weight: 700; color: var(--gold); }
+    .pago-row-icon { font-size: 1rem; flex-shrink: 0; }
+    .pago-row-metodo { font-size: .8rem; font-weight: 600; color: var(--cream); flex: 1; text-align: left; }
+    .pago-row-precio { font-size: .84rem; font-weight: 700; color: var(--gold); }
     .precio-includes-titulo {
-      font-size: .65rem; font-weight: 700;
-      letter-spacing: .14em; text-transform: uppercase;
-      color: var(--muted); margin: 24px 0 10px; text-align: left;
+      font-size: .62rem; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted); margin: 20px 0 8px; text-align: left;
     }
-    .precio-includes { list-style: none; text-align: left; margin-bottom: 28px; }
+    .precio-includes { list-style: none; text-align: left; margin-bottom: 22px; }
     .precio-includes li {
-      font-size: .88rem; color: var(--muted);
-      padding: 7px 0; display: flex; align-items: center;
-      gap: 10px; border-bottom: 1px solid rgba(252,20,132,.1);
+      font-size: .85rem; color: var(--muted); padding: 6px 0;
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid rgba(252,20,132,.08);
     }
     .precio-includes li:last-child { border-bottom: none; }
-    .precio-includes li::before { content: '✦'; color: var(--gold); font-size: .5rem; flex-shrink: 0; }
-    .precio-deadline { font-size: .74rem; color: var(--muted); margin-top: 14px; }
+    .precio-includes li::before { content: '✦'; color: var(--gold); font-size: .48rem; flex-shrink: 0; }
+    .precio-deadline { font-size: .72rem; color: var(--muted); margin-top: 12px; }
     .garantia {
-      margin-top: 20px; background: var(--bg2);
-      border-radius: 12px; padding: 14px 18px;
-      font-size: .82rem; color: var(--muted); text-align: left;
+      margin-top: 16px; background: var(--bg2); border-radius: 10px;
+      padding: 12px 16px; font-size: .79rem; color: var(--muted); text-align: left;
     }
     .garantia strong { color: var(--cream); }
     .exalumnas-box {
-      max-width: 500px; margin: 0 auto;
-      display: flex; align-items: flex-start; gap: 16px;
+      max-width: 460px; margin: 0 auto;
+      display: flex; align-items: flex-start; gap: 14px;
       background: var(--bg); border: 1px solid var(--border);
-      border-radius: 16px; padding: 24px 28px;
+      border-radius: 14px; padding: 20px 24px;
     }
-    .exalumnas-icon { font-size: 1.6rem; flex-shrink: 0; }
-    .exalumnas-title { font-size: .88rem; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
-    .exalumnas-text  { font-size: .82rem; color: var(--muted); line-height: 1.65; margin-bottom: 10px; }
+    .exalumnas-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .exalumnas-title { font-size: .84rem; font-weight: 700; color: var(--cream); margin-bottom: 3px; }
+    .exalumnas-text  { font-size: .79rem; color: var(--muted); line-height: 1.6; margin-bottom: 8px; }
     .exalumnas-link  {
-      font-size: .75rem; font-weight: 700; color: var(--gold);
+      font-size: .72rem; font-weight: 700; color: var(--gold);
       text-decoration: none; letter-spacing: .06em; text-transform: uppercase;
     }
     .exalumnas-link:hover { color: var(--gold-light); }
 
+    /* ── CTA INTERMEDIO ── */
+    .cta-mid {
+      background: var(--bg2); padding: 30px 24px; text-align: center;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      position: relative; z-index: 1;
+    }
+
+    /* ── GALERÍA ── */
+    #galeria { background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%); }
+    #galeria .section-label { color: var(--gold-light); }
+    #galeria .section-title { color: #fff; }
+    #galeria .section-sub { color: rgba(255,255,255,.6); font-size: .85rem; margin-bottom: 24px; font-weight: 300; }
+    .galeria-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .gcarta {
+      width: 95px; border-radius: 9px; overflow: hidden;
+      border: 2px solid rgba(253,124,186,.35);
+      box-shadow: 0 6px 20px rgba(0,0,0,.4);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .gcarta:hover { transform: translateY(-7px) scale(1.04); box-shadow: 0 14px 32px rgba(252,20,132,.3); }
+    .gcarta img { width: 100%; display: block; }
+
     /* ── FAQ ── */
     #faq { background: rgba(162,162,196,.1); }
     details {
-      background: var(--bg);
-      border: 1px solid rgba(252,20,132,.2);
-      border-radius: 12px;
-      margin-bottom: 10px;
-      overflow: hidden;
+      background: var(--bg); border: 1px solid rgba(252,20,132,.18);
+      border-radius: 11px; margin-bottom: 8px; overflow: hidden;
     }
     summary {
-      cursor: pointer;
-      padding: 16px 20px;
-      font-weight: 600;
-      font-size: .9rem;
-      color: var(--cream);
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      letter-spacing: .02em;
+      cursor: pointer; padding: 14px 18px; font-weight: 600;
+      font-size: .87rem; color: var(--cream); list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
     }
-    summary::after { content: '+'; font-size: 1.3rem; color: var(--gold); flex-shrink: 0; }
+    summary::after { content: '+'; font-size: 1.2rem; color: var(--gold); flex-shrink: 0; }
     details[open] summary::after { content: '−'; }
-    details p { padding: 0 20px 16px; color: var(--muted); font-size: .88rem; line-height: 1.75; }
+    details p { padding: 0 18px 14px; color: var(--muted); font-size: .85rem; line-height: 1.75; }
+
+    /* ── SOBRE MÍ ── */
+    #sobre-mi { background: var(--bg); }
+    .sobre-inner { display: flex; gap: 36px; align-items: flex-start; }
+    .sobre-foto {
+      width: 170px; height: 220px; border-radius: 14px;
+      object-fit: cover; object-position: center top; flex-shrink: 0;
+      box-shadow: 0 6px 24px rgba(27,19,83,.15); border: 2px solid var(--border);
+    }
+    .sobre-texto h3 { font-size: 1.3rem; color: var(--cream); margin-bottom: 12px; }
+    .sobre-texto p  { font-size: .88rem; color: var(--muted); margin-bottom: 10px; line-height: 1.75; }
+    .sobre-quote {
+      display: block; margin-top: 14px; background: var(--bg2);
+      border-left: 3px solid var(--gold); padding: 12px 16px;
+      border-radius: 0 9px 9px 0; color: var(--cream); font-style: italic; font-size: .86rem;
+    }
+    .social-links { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+    .social-links a {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--bg2); color: var(--cream); border-radius: 100px;
+      padding: 5px 14px; font-size: .75rem; font-weight: 600;
+      letter-spacing: .05em; text-decoration: none;
+      border: 1px solid var(--border); transition: background .2s, color .2s;
+    }
+    .social-links a:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
 
     /* ── CTA FINAL ── */
-    #cta-final { background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%); padding: 80px 24px; text-align: center; }
-    #cta-final h2 { color: #fff; font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 14px; letter-spacing: .03em; }
-    #cta-final p  { color: rgba(255,255,255,.7); margin-bottom: 36px; font-size: .95rem; font-weight: 300; }
-    #cta-final .btn-outline { border-color: rgba(255,255,255,.5); color: #fff; margin-left: 12px; }
-    #cta-final .btn-outline:hover { background: rgba(255,255,255,.1); }
+    #cta-final {
+      background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%);
+      padding: 60px 24px; text-align: center;
+    }
+    #cta-final h2 { color: #fff; font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 12px; letter-spacing: .03em; }
+    #cta-final p  { color: rgba(255,255,255,.7); margin-bottom: 28px; font-size: .9rem; font-weight: 300; }
 
     /* ── FOOTER ── */
     footer {
-      background: var(--cream);
-      color: rgba(255,255,255,.55);
-      text-align: center;
-      padding: 32px 20px;
-      font-size: .78rem;
-      letter-spacing: .05em;
+      background: var(--cream); color: rgba(255,255,255,.55);
+      text-align: center; padding: 28px 20px;
+      font-size: .76rem; letter-spacing: .05em;
     }
     footer a { color: var(--gold-light); text-decoration: none; }
     footer a:hover { color: #fff; }
 
     /* ── WA FLOAT ── */
     .wa-float {
-      position: fixed; bottom: 24px; right: 24px;
+      position: fixed; bottom: 22px; right: 22px;
       z-index: 999; display: flex; align-items: center; gap: 10px; text-decoration: none;
     }
     .wa-label {
-      background: var(--cream); color: #fff;
-      padding: 7px 14px; border-radius: 100px;
-      font-size: .78rem; font-weight: 600; letter-spacing: .04em;
-      box-shadow: 0 4px 14px rgba(27,19,83,.25);
-      white-space: nowrap; opacity: 0; transform: translateX(8px);
+      background: var(--cream); color: #fff; padding: 6px 12px; border-radius: 100px;
+      font-size: .75rem; font-weight: 600; letter-spacing: .04em;
+      box-shadow: 0 4px 12px rgba(27,19,83,.25); white-space: nowrap;
+      opacity: 0; transform: translateX(8px);
       transition: opacity .3s, transform .3s; pointer-events: none;
     }
     .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
     .wa-btn {
-      width: 56px; height: 56px; background: #25D366; border-radius: 50%;
+      width: 52px; height: 52px; background: #25D366; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 20px rgba(37,211,102,.4);
+      box-shadow: 0 5px 18px rgba(37,211,102,.4);
       transition: transform .25s, box-shadow .25s; flex-shrink: 0;
     }
-    .wa-float:hover .wa-btn { transform: scale(1.1); box-shadow: 0 10px 28px rgba(37,211,102,.5); }
-    .wa-btn svg { width: 28px; height: 28px; fill: #fff; }
+    .wa-float:hover .wa-btn { transform: scale(1.1); box-shadow: 0 9px 26px rgba(37,211,102,.5); }
+    .wa-btn svg { width: 26px; height: 26px; fill: #fff; }
 
-    /* ── CTA INTERMEDIO ── */
-    .cta-mid {
-      background: var(--bg2);
-      padding: 36px 24px;
-      text-align: center;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      position: relative; z-index: 1;
-    }
-
-    @media (max-width: 680px) {
-      .sobre-inner { flex-direction: column; align-items: center; gap: 24px; }
-      .sobre-foto  { width: 170px; height: 220px; }
-      .precio-box  { padding: 30px 18px; }
-      .cards-hero .carta { width: 78px; height: 118px; }
-      .cards-hero .carta:nth-child(1) { margin-left: -112px; }
-      .cards-hero .carta:nth-child(2) { margin-left: -39px; }
-      .cards-hero .carta:nth-child(3) { margin-left: 33px; }
+    @media (max-width: 620px) {
+      .bullets       { grid-template-columns: 1fr; }
+      .dos-cols      { grid-template-columns: 1fr; gap: 20px; }
+      .sobre-inner   { flex-direction: column; align-items: center; gap: 20px; }
+      .sobre-foto    { width: 150px; height: 195px; }
+      .precio-card   { padding: 42px 20px 28px; }
+      .cards-hero .carta { width: 56px; height: 84px; }
+      .cards-hero .carta:nth-child(1) { margin-left: -80px; }
+      .cards-hero .carta:nth-child(2) { margin-left: -28px; }
+      .cards-hero .carta:nth-child(3) { margin-left: 24px; }
       .wa-label { display: none; }
     }
   </style>
@@ -539,7 +381,7 @@
 <!-- ══ HERO ══ -->
 <section class="hero">
   <div class="container">
-    <img src="https://bu-cdn.tiendup.com/business/29424/images/logo_6803d674bc023_medium.jpg" alt="Cate Espina" class="hero-logo"/>
+    <img src="img/cate.jpg" alt="Cate Espina" class="hero-logo"/>
     <div class="cards-hero" aria-hidden="true">
       <div class="carta"><img src="cartas/Dia3_REDISENO__s13_i08.jpg" alt="Carta Lenormand"></div>
       <div class="carta"><img src="cartas/Dia3_REDISENO__s04_i05.jpg" alt="Carta Lenormand"></div>
@@ -563,40 +405,43 @@
     <span class="section-label">¿Es para mí?</span>
     <h2 class="section-title">Este curso es para vos si…</h2>
     <div class="bullets">
-      <div class="bullet-item"><span class="bullet-icon">🌱</span><span class="bullet-text">Buscás conocerte mejor y conectar con tu intuición desde un lugar profundo y honesto.</span></div>
-      <div class="bullet-item"><span class="bullet-icon">🔮</span><span class="bullet-text">Querés empezar en el mundo de los oráculos y no sabés por dónde comenzar.</span></div>
-      <div class="bullet-item"><span class="bullet-icon">🃏</span><span class="bullet-text">Te atraen las Cartas Gitanas por su lenguaje claro, simbólico y directo.</span></div>
-      <div class="bullet-item"><span class="bullet-icon">🌿</span><span class="bullet-text">Querés aprender Lenormand, un oráculo de 36 cartas ideal como puerta de entrada.</span></div>
-      <div class="bullet-item"><span class="bullet-icon">💛</span><span class="bullet-text">Deseás empezar a hacer lecturas para vos y para otras personas, de forma clara y concreta.</span></div>
+      <div class="bullet-item"><span class="bullet-icon">🌱</span><span class="bullet-text">Buscás conocerte mejor y conectar con tu intuición.</span></div>
+      <div class="bullet-item"><span class="bullet-icon">🔮</span><span class="bullet-text">Querés empezar en el mundo de los oráculos y no sabés por dónde.</span></div>
+      <div class="bullet-item"><span class="bullet-icon">🃏</span><span class="bullet-text">Te atraen las Cartas Gitanas por su lenguaje claro y directo.</span></div>
+      <div class="bullet-item"><span class="bullet-icon">🌿</span><span class="bullet-text">Querés aprender Lenormand como puerta de entrada al mundo de las cartas.</span></div>
+      <div class="bullet-item"><span class="bullet-icon">💛</span><span class="bullet-text">Deseás hacer lecturas para vos y para otras personas de forma clara y concreta.</span></div>
+      <div class="bullet-item"><span class="bullet-icon">✨</span><span class="bullet-text">Buscás una herramienta de crecimiento personal o una nueva fuente de ingresos.</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══ QUÉ VAS A LOGRAR ══ -->
-<section id="logros" class="section">
+<!-- ══ QUÉ VAS A LOGRAR + QUÉ INCLUYE ══ -->
+<section id="logros-incluye" class="section">
   <div class="container">
-    <span class="section-label">Resultados</span>
-    <h2 class="section-title">Qué vas a lograr</h2>
-    <div class="logros-grid">
-      <div class="logro">
-        <div class="ico">🤍</div>
-        <h3>Conectar con tu intuición</h3>
-        <p>Vas a aprender a confiar en vos y en lo que las cartas te muestran.</p>
+    <span class="section-label">El curso</span>
+    <h2 class="section-title">Qué vas a lograr y qué incluye</h2>
+    <div class="dos-cols">
+      <div class="col-bloque">
+        <h3>🌿 Qué vas a lograr</h3>
+        <ul class="col-lista">
+          <li>Conectar con tu intuición y confiar en vos</li>
+          <li>Conocer las 36 cartas del oráculo completo</li>
+          <li>Hacer lecturas reales — amor, trabajo, decisiones</li>
+          <li>Leer para otras personas con seguridad y claridad</li>
+          <li>Sumar una nueva herramienta de crecimiento personal</li>
+        </ul>
       </div>
-      <div class="logro">
-        <div class="ico">🃏</div>
-        <h3>Conocer las 36 cartas</h3>
-        <p>Interpretarás el Oráculo de Lenormand completo con seguridad y claridad.</p>
-      </div>
-      <div class="logro">
-        <div class="ico">💬</div>
-        <h3>Hacer lecturas reales</h3>
-        <p>Amor, trabajo, decisiones y procesos personales — para vos y para otros.</p>
-      </div>
-      <div class="logro">
-        <div class="ico">✨</div>
-        <h3>Una nueva herramienta</h3>
-        <p>Como fuente de crecimiento personal o posible fuente de ingresos.</p>
+      <div class="col-bloque">
+        <h3>📦 Qué incluye</h3>
+        <ul class="col-lista">
+          <li>Clases grabadas — videos cortos y prácticos</li>
+          <li>PDF descargable con simbología y lecturas</li>
+          <li>2 sesiones en vivo grupales</li>
+          <li>Acompañamiento por WhatsApp durante 21 días</li>
+          <li>Mi método propio paso a paso</li>
+          <li>Certificado digital al finalizar</li>
+          <li>Acceso al contenido por 3 meses</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -606,11 +451,11 @@
 <section id="testimonios" class="section">
   <div class="container">
     <span class="section-label">Testimonios</span>
-    <h2 class="section-title">Lo que dicen quienes ya hicieron el curso</h2>
+    <h2 class="section-title">Lo que dicen quienes ya lo hicieron</h2>
     <div class="testi-grid">
       <div class="testi">
         <div class="testi-quote">"</div>
-        <p>Hermoso curso, es mi primera vez interpretando cartas y ha sido maravilloso, de mucha transformación y emociones. ¡También súper enamorada de estas cartas! Un gracias enorme, Cate.</p>
+        <p>Hermoso curso, es mi primera vez interpretando cartas y ha sido maravilloso, de mucha transformación y emociones. ¡Súper enamorada de estas cartas! Un gracias enorme, Cate.</p>
         <div class="author">— Lorena Gutierrez</div>
         <div class="stars">★★★★★</div>
       </div>
@@ -630,18 +475,54 @@
   </div>
 </section>
 
-<!-- ══ QUÉ INCLUYE ══ -->
-<section id="incluye" class="section">
-  <div class="container">
-    <span class="section-label">El curso incluye</span>
-    <h2 class="section-title">¿Qué incluye?</h2>
-    <div class="incluye-grid">
-      <div class="incluye-item"><span class="ico">🎬</span><h3>Clases grabadas</h3><p>Videos cortos, claros y prácticos que podés ver a tu ritmo.</p></div>
-      <div class="incluye-item"><span class="ico">📄</span><h3>PDF descargable</h3><p>Simbología, colores y ejemplos de lecturas para repasar siempre.</p></div>
-      <div class="incluye-item"><span class="ico">💬</span><h3>WhatsApp 21 días</h3><p>Acompañamiento grupal durante todo el proceso del curso.</p></div>
-      <div class="incluye-item"><span class="ico">🔴</span><h3>2 Sesiones en vivo</h3><p>Práctica grupal en directo para consolidar el aprendizaje.</p></div>
-      <div class="incluye-item"><span class="ico">🌟</span><h3>Método propio</h3><p>Mi método explicado paso a paso para leer con claridad y confianza.</p></div>
-      <div class="incluye-item"><span class="ico">🎓</span><h3>Certificado digital</h3><p>Al completar el curso recibís tu certificado digital.</p></div>
+<!-- ══ PRECIO ══ -->
+<section id="precio" class="section">
+  <div class="container" style="text-align:center;">
+    <span class="section-label">✦ Inversión</span>
+    <h2 class="section-title">Sumate al curso</h2>
+    <div class="precio-card-wrap">
+      <div class="precio-card">
+        <div class="precio-badge">📅 Próxima edición · 15 junio 2026</div>
+        <div class="precio-eyebrow-green">♥ Transferencia bancaria</div>
+        <div class="precio-amount">$2.900</div>
+        <div class="precio-currency">Pesos uruguayos</div>
+        <div class="otros-pagos">
+          <div class="otros-pagos-titulo">También podés pagar con</div>
+          <div class="pago-row">
+            <span class="pago-row-icon">💳</span>
+            <span class="pago-row-metodo">Mercado Pago</span>
+            <span class="pago-row-precio">$3.300 UYU</span>
+          </div>
+          <div class="pago-row">
+            <span class="pago-row-icon">🌐</span>
+            <span class="pago-row-metodo">PayPal</span>
+            <span class="pago-row-precio">USD 85</span>
+          </div>
+        </div>
+        <div class="precio-includes-titulo">¿Qué incluye?</div>
+        <ul class="precio-includes">
+          <li>Clases grabadas — videos cortos y prácticos</li>
+          <li>PDF descargable con simbología y lecturas</li>
+          <li>2 sesiones en vivo grupales</li>
+          <li>Acompañamiento por WhatsApp durante 21 días</li>
+          <li>Mi método propio paso a paso</li>
+          <li>Certificado digital al finalizar</li>
+          <li>Acceso al contenido por 3 meses</li>
+        </ul>
+        <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary" style="display:block;width:100%;text-align:center;">
+          Quiero inscribirme ✦
+        </a>
+        <p class="precio-deadline">⚡ Cupos limitados · Inicio: 15 de junio de 2026</p>
+        <div class="garantia">🔁 <strong>Garantía de satisfacción:</strong> Si después de 7 días sentís que el curso no es para vos, podés solicitar la devolución del 50% del valor abonado.</div>
+      </div>
+    </div>
+    <div class="exalumnas-box">
+      <span class="exalumnas-icon">💜</span>
+      <div>
+        <p class="exalumnas-title">¿Ya sos parte de mi comunidad?</p>
+        <p class="exalumnas-text">Si ya hiciste algún curso conmigo, tenés un precio exclusivo. Consultame por WhatsApp.</p>
+        <a href="https://wa.me/59892260717?text=Hola%20Cate!%20Ya%20hice%20un%20curso%20tuyo%20y%20quisiera%20saber%20el%20precio%20exclusivo%20para%20el%20curso%20de%20Lenormand%20%E2%9C%A8" class="exalumnas-link" target="_blank">Consultá tu precio exclusivo ✦</a>
+      </div>
     </div>
   </div>
 </section>
@@ -656,7 +537,7 @@
   <div class="container" style="text-align:center;">
     <span class="section-label">El oráculo</span>
     <h2 class="section-title">Las cartas que vas a aprender a leer</h2>
-    <p class="section-intro" style="margin:0 auto 36px;">El Lenormand tiene 36 cartas, cada una con su propia personalidad y mensaje. Durante el curso las vas a conocer a fondo.</p>
+    <p class="section-sub">El Lenormand tiene 36 cartas, cada una con su propia personalidad y mensaje.</p>
     <div class="galeria-grid">
       <div class="gcarta"><img src="cartas/Dia3_REDISENO__s13_i08.jpg" alt="Carta Lenormand"></div>
       <div class="gcarta"><img src="cartas/Dia3_REDISENO__s13_i09.jpg" alt="Carta Lenormand"></div>
@@ -668,97 +549,11 @@
   </div>
 </section>
 
-<!-- ══ SOBRE MÍ ══ -->
-<section id="sobre-mi" class="section">
-  <div class="container">
-    <span class="section-label">Tu profesora</span>
-    <h2 class="section-title">¿Quién soy?</h2>
-    <div class="sobre-inner">
-      <img src="foto.jpg.jpg" class="sobre-foto" alt="Cate Espina">
-      <div class="sobre-texto">
-        <h3>¡Hola! Soy Caterine Espina ✨</h3>
-        <p>Apasionada del tarot y fan de crear momentos especiales. Cumplo el 20 de enero, soy muy capricornio. Me dicen Cate, Cati, Cata.</p>
-        <p>Estoy en el último año de la carrera de Ingeniero Agrónomo, vivo y amo el campo.</p>
-        <p>Toqué fondo y ahí fue que me conecté con el fascinante mundo del tarot, el cual me permitió conectar conmigo desde un lugar profundo. Siempre me gustó lo místico, las brujas, las pelis de magos y magia.</p>
-        <span class="sobre-quote">"Mi enfoque es siempre respetuoso y empático, creando un espacio seguro donde todos se sientan cómodos."</span>
-        <div class="social-links">
-          <a href="https://www.instagram.com/cate.tarot/" target="_blank" rel="noopener">📸 @cate.tarot</a>
-          <a href="https://www.facebook.com/profile.php?id=61561429928785" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.tiktok.com/@cate.tarot" target="_blank" rel="noopener">TikTok</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ PRECIO ══ -->
-<section id="precio" class="section">
-  <div class="container" style="text-align:center;">
-    <span class="section-label">✦ Inversión</span>
-    <h2 class="section-title">Sumate al curso</h2>
-
-    <div class="precio-card-wrap">
-      <div class="precio-card">
-        <div class="precio-badge">📅 Próxima edición · 15 junio 2026</div>
-
-        <div class="precio-eyebrow-green">♥ Transferencia bancaria</div>
-        <div class="precio-amount">$2.900</div>
-        <div class="precio-currency">Pesos uruguayos</div>
-
-        <!-- Otros métodos de pago -->
-        <div class="otros-pagos">
-          <div class="otros-pagos-titulo">También podés pagar con</div>
-          <div class="pago-row">
-            <span class="pago-row-icon">💳</span>
-            <span class="pago-row-metodo">Mercado Pago</span>
-            <span class="pago-row-precio">$3.300 UYU</span>
-          </div>
-          <div class="pago-row">
-            <span class="pago-row-icon">🌐</span>
-            <span class="pago-row-metodo">PayPal</span>
-            <span class="pago-row-precio">USD 85</span>
-          </div>
-        </div>
-
-        <!-- Qué incluye -->
-        <div class="precio-includes-titulo">¿Qué incluye?</div>
-        <ul class="precio-includes">
-          <li>Clases grabadas — videos cortos y prácticos</li>
-          <li>PDF descargable con simbología y lecturas</li>
-          <li>2 sesiones en vivo grupales</li>
-          <li>Acompañamiento por WhatsApp durante 21 días</li>
-          <li>Mi método propio paso a paso</li>
-          <li>Certificado digital al finalizar</li>
-          <li>Acceso al contenido por 3 meses</li>
-        </ul>
-
-        <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary" style="display:block;width:100%;text-align:center;">
-          Quiero inscribirme ✦
-        </a>
-        <p class="precio-deadline">⚡ Cupos limitados · Inicio: 15 de junio de 2026</p>
-
-        <div class="garantia">🔁 <strong>Garantía de satisfacción:</strong> Si después de 7 días sentís que el curso no es para vos, podés solicitar la devolución del 50% del valor abonado.</div>
-      </div>
-    </div>
-
-    <!-- Precio ex alumnas -->
-    <div class="exalumnas-box">
-      <span class="exalumnas-icon">💜</span>
-      <div>
-        <p class="exalumnas-title">¿Ya sos parte de mi comunidad?</p>
-        <p class="exalumnas-text">Si ya hiciste algún curso conmigo, tenés un precio exclusivo. Consultame por WhatsApp y te lo cuento.</p>
-        <a href="https://wa.me/59892260717?text=Hola%20Cate!%20Ya%20hice%20un%20curso%20tuyo%20y%20quisiera%20saber%20el%20precio%20exclusivo%20para%20el%20curso%20de%20Lenormand%20%E2%9C%A8" class="exalumnas-link" target="_blank">Consultá tu precio exclusivo ✦</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- ══ FAQ ══ -->
 <section id="faq" class="section">
   <div class="container">
     <span class="section-label">¿Tenés dudas?</span>
-    <h2 class="section-title" style="margin-bottom:28px;">Preguntas frecuentes</h2>
+    <h2 class="section-title" style="margin-bottom:20px;">Preguntas frecuentes</h2>
     <details>
       <summary>¿Necesito un mazo físico para empezar?</summary>
       <p>No es necesario al inicio. En las primeras clases vas a conocer distintos mazos y podrás elegir cuál va mejor con vos.</p>
@@ -786,18 +581,41 @@
   </div>
 </section>
 
+<!-- ══ SOBRE MÍ ══ -->
+<section id="sobre-mi" class="section">
+  <div class="container">
+    <span class="section-label">Tu profesora</span>
+    <h2 class="section-title">¿Quién soy?</h2>
+    <div class="sobre-inner">
+      <img src="img/cate.jpg" class="sobre-foto" alt="Cate Espina">
+      <div class="sobre-texto">
+        <h3>¡Hola! Soy Caterine Espina ✨</h3>
+        <p>Apasionada del tarot y fan de crear momentos especiales. Cumplo el 20 de enero, soy muy capricornio. Me dicen Cate, Cati, Cata.</p>
+        <p>Estoy en el último año de la carrera de Ingeniero Agrónomo, vivo y amo el campo.</p>
+        <p>Toqué fondo y ahí fue que me conecté con el fascinante mundo del tarot, el cual me permitió conectar conmigo desde un lugar profundo.</p>
+        <span class="sobre-quote">"Mi enfoque es siempre respetuoso y empático, creando un espacio seguro donde todos se sientan cómodos."</span>
+        <div class="social-links">
+          <a href="https://www.instagram.com/cate.tarot/" target="_blank" rel="noopener">📸 @cate.tarot</a>
+          <a href="https://www.facebook.com/profile.php?id=61561429928785" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@cate.tarot" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ CTA FINAL ══ -->
 <section id="cta-final">
   <div class="container">
     <h2>Las cartas tienen algo que decirte.<br>¿Estás lista para escuchar?</h2>
     <p>Empezá tu proceso guiado de 21 días con el Oráculo de Lenormand.</p>
-    <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary" style="font-size:.85rem;padding:16px 48px;">Comenzar el curso — $2.900 UY ✦</a>
+    <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary">Comenzar el curso — $2.900 UY ✦</a>
   </div>
 </section>
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <p style="margin-bottom:8px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);">Cate Espina · Oráculo de Lenormand</p>
+  <p style="margin-bottom:6px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);">Cate Espina · Oráculo de Lenormand</p>
   <p>
     <a href="https://www.instagram.com/cate.tarot/" target="_blank">@cate.tarot</a>
     &nbsp;·&nbsp;
@@ -805,7 +623,7 @@
     &nbsp;·&nbsp;
     <a href="https://catespinatarot.com" target="_blank">catespinatarot.com</a>
   </p>
-  <p style="margin-top:12px;opacity:.4;font-size:.72rem;letter-spacing:.08em;">© 2026 · TODOS LOS DERECHOS RESERVADOS</p>
+  <p style="margin-top:10px;opacity:.4;font-size:.7rem;letter-spacing:.08em;">© 2026 · TODOS LOS DERECHOS RESERVADOS</p>
 </footer>
 
 <!-- ══ BOTÓN FLOTANTE WHATSAPP ══ -->
