@@ -103,14 +103,10 @@
     .hero {
       display: flex; flex-direction: column; align-items: center;
       justify-content: center; text-align: center;
-      padding: 72px 24px 44px;
+      padding: 60px 20px 36px;
       background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%);
     }
-    .hero-logo {
-      width: 72px; height: auto;
-      margin-bottom: 14px;
-      border-radius: 8px;
-    }
+    .hero-logo { display: none; }
     .cards-hero {
       display: flex; justify-content: center; align-items: flex-end;
       height: 120px; position: relative; margin-bottom: 20px;
@@ -388,17 +384,64 @@
     .wa-float:hover .wa-btn { transform: scale(1.1); box-shadow: 0 9px 26px rgba(37,211,102,.5); }
     .wa-btn svg { width: 26px; height: 26px; fill: #fff; }
 
-    @media (max-width: 620px) {
-      .bullets       { grid-template-columns: 1fr; }
-      .dos-cols      { grid-template-columns: 1fr; gap: 20px; }
-      .sobre-inner   { flex-direction: column; align-items: center; gap: 20px; }
-      .sobre-foto    { width: 150px; height: 195px; }
-      .precio-card   { padding: 42px 20px 28px; }
-      .cards-hero .carta { width: 56px; height: 84px; }
-      .cards-hero .carta:nth-child(1) { margin-left: -80px; }
-      .cards-hero .carta:nth-child(2) { margin-left: -28px; }
-      .cards-hero .carta:nth-child(3) { margin-left: 24px; }
+    @media (max-width: 640px) {
+      /* general */
+      .container   { padding: 0 16px; }
+      .section     { padding: 40px 0; }
+
+      /* nav */
+      nav { padding: 10px 16px; }
+      .nav-logo { font-size: .78rem; }
+      .nav-cta  { font-size: .65rem; padding: 6px 14px; }
+
+      /* hero */
+      .hero { padding: 56px 16px 32px; }
+      .cards-hero { height: 100px; margin-bottom: 16px; }
+      .cards-hero .carta { width: 54px; height: 82px; }
+      .cards-hero .carta:nth-child(1) { margin-left: -76px; }
+      .cards-hero .carta:nth-child(2) { margin-left: -27px; }
+      .cards-hero .carta:nth-child(3) { margin-left: 22px; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero-subtitle { font-size: .82rem; }
+      .hero-badges { gap: 5px; }
+      .hero-badge  { font-size: .6rem; padding: 4px 10px; }
+      .btn-primary { padding: 12px 28px; font-size: .74rem; }
+
+      /* secciones */
+      .section-title { font-size: 1.25rem; }
+      .bullets       { grid-template-columns: 1fr; gap: 8px; }
+      .bullet-item   { padding: 12px 14px; }
+      .bullet-text   { font-size: .82rem; }
+
+      /* dos columnas → apiladas */
+      .dos-cols      { grid-template-columns: 1fr; gap: 14px; }
+      .col-bloque    { padding: 18px 16px; }
+
+      /* testimonios */
+      .testi-grid    { grid-template-columns: 1fr; }
+
+      /* precio */
+      .precio-card   { padding: 40px 18px 26px; }
+      .precio-amount { font-size: 2.6rem; }
+      .exalumnas-box { padding: 16px 18px; flex-direction: column; gap: 8px; }
+
+      /* sobre mí */
+      .sobre-inner   { flex-direction: column; align-items: center; gap: 18px; }
+      .sobre-foto    { width: 140px; height: 180px; }
+
+      /* galería */
+      .gcarta        { width: 80px; }
+
+      /* incluye grid */
+      .incluye-grid  { grid-template-columns: 1fr 1fr; }
+
+      /* cta-mid */
+      .cta-mid { padding: 22px 16px; }
+
+      /* wa */
       .wa-label { display: none; }
+      .wa-btn   { width: 46px; height: 46px; }
+      .wa-btn svg { width: 22px; height: 22px; }
     }
   </style>
 </head>
