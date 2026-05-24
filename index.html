@@ -56,6 +56,29 @@
     .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
     .section   { padding: 52px 0; }
 
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 12px 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 1px 20px rgba(252,20,132,.08);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif; font-size: .9rem;
+      font-weight: 700; letter-spacing: .12em; color: var(--cream);
+      text-decoration: none; text-transform: uppercase;
+    }
+    .nav-cta {
+      background: var(--gold); color: #fff;
+      padding: 7px 18px; border-radius: 100px;
+      text-decoration: none; font-size: .7rem; font-weight: 600;
+      letter-spacing: .07em; text-transform: uppercase; transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
     /* ── BOTONES ── */
     .btn-primary {
       display: inline-block; background: var(--gold); color: #fff;
@@ -80,15 +103,13 @@
     .hero {
       display: flex; flex-direction: column; align-items: center;
       justify-content: center; text-align: center;
-      padding: 36px 24px 44px;
+      padding: 72px 24px 44px;
       background: linear-gradient(160deg, #1b1353 0%, #2a1060 100%);
     }
     .hero-logo {
-      width: 56px; height: 56px; border-radius: 50%;
-      object-fit: cover; object-position: center top;
+      width: 72px; height: auto;
       margin-bottom: 14px;
-      border: 2px solid rgba(253,124,186,.5);
-      box-shadow: 0 4px 16px rgba(0,0,0,.3);
+      border-radius: 8px;
     }
     .cards-hero {
       display: flex; justify-content: center; align-items: flex-end;
@@ -378,10 +399,16 @@
 </head>
 <body>
 
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="https://catespinatarot.com" class="nav-logo">Cate Espina</a>
+  <a href="#precio" class="nav-cta">Inscribirme ✦</a>
+</nav>
+
 <!-- ══ HERO ══ -->
 <section class="hero">
   <div class="container">
-    <img src="img/cate.jpg" alt="Cate Espina" class="hero-logo"/>
+    <img src="https://bu-cdn.tiendup.com/business/29424/images/logo_6803d674bc023_medium.jpg" alt="Cate Espina" class="hero-logo"/>
     <div class="cards-hero" aria-hidden="true">
       <div class="carta"><img src="cartas/Dia3_REDISENO__s13_i08.jpg" alt="Carta Lenormand"></div>
       <div class="carta"><img src="cartas/Dia3_REDISENO__s04_i05.jpg" alt="Carta Lenormand"></div>
@@ -415,6 +442,10 @@
   </div>
 </section>
 
+<div class="cta-mid">
+  <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary">Quiero ser parte ✦</a>
+</div>
+
 <!-- ══ QUÉ VAS A LOGRAR + QUÉ INCLUYE ══ -->
 <section id="logros-incluye" class="section">
   <div class="container">
@@ -447,11 +478,15 @@
   </div>
 </section>
 
+<div class="cta-mid">
+  <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary">Reservar mi lugar ✦</a>
+</div>
+
 <!-- ══ TESTIMONIOS ══ -->
 <section id="testimonios" class="section">
   <div class="container">
     <span class="section-label">Testimonios</span>
-    <h2 class="section-title">Lo que dicen quienes ya lo hicieron</h2>
+    <h2 class="section-title">Esto es lo que dicen mis alumnas del curso</h2>
     <div class="testi-grid">
       <div class="testi">
         <div class="testi-quote">"</div>
@@ -549,6 +584,10 @@
   </div>
 </section>
 
+<div class="cta-mid">
+  <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary">Quiero aprender a leerlas ✦</a>
+</div>
+
 <!-- ══ FAQ ══ -->
 <section id="faq" class="section">
   <div class="container">
@@ -581,6 +620,10 @@
   </div>
 </section>
 
+<div class="cta-mid">
+  <a href="https://catespinatarot.com/p/curso-21-dias-aprendiendo-el-oraculo-de-lenormand-o-gitanas" class="btn-primary">Inscribirme ahora ✦</a>
+</div>
+
 <!-- ══ SOBRE MÍ ══ -->
 <section id="sobre-mi" class="section">
   <div class="container">
@@ -594,11 +637,6 @@
         <p>Estoy en el último año de la carrera de Ingeniero Agrónomo, vivo y amo el campo.</p>
         <p>Toqué fondo y ahí fue que me conecté con el fascinante mundo del tarot, el cual me permitió conectar conmigo desde un lugar profundo.</p>
         <span class="sobre-quote">"Mi enfoque es siempre respetuoso y empático, creando un espacio seguro donde todos se sientan cómodos."</span>
-        <div class="social-links">
-          <a href="https://www.instagram.com/cate.tarot/" target="_blank" rel="noopener">📸 @cate.tarot</a>
-          <a href="https://www.facebook.com/profile.php?id=61561429928785" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.tiktok.com/@cate.tarot" target="_blank" rel="noopener">TikTok</a>
-        </div>
       </div>
     </div>
   </div>
