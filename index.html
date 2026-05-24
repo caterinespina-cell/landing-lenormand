@@ -192,20 +192,21 @@
     /* ── TESTIMONIOS ── */
     #testimonios { background: var(--bg2); }
     .testi-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex; flex-direction: column;
       gap: 14px; margin-top: 4px;
     }
     .testi {
       background: var(--bg); border: 1px solid rgba(252,20,132,.25);
-      border-radius: 14px; padding: 22px 20px;
+      border-radius: 14px; padding: 18px 22px;
       box-shadow: 0 2px 10px rgba(27,19,83,.06);
       transition: border-color .2s;
-      display: flex; flex-direction: column;
+      display: flex; align-items: flex-start; gap: 16px;
     }
     .testi:hover { border-color: rgba(252,20,132,.5); }
-    .testi-quote { font-size: 2.4rem; color: var(--gold-light); line-height: 1; margin-bottom: 4px; font-family: Georgia, serif; }
-    .testi p { font-size: .88rem; color: var(--muted); font-style: italic; line-height: 1.65; flex: 1; }
-    .testi .author { margin-top: 16px; font-weight: 700; color: var(--cream); font-size: .78rem; letter-spacing: .04em; }
+    .testi-quote { font-size: 2rem; color: var(--gold-light); line-height: 1; flex-shrink: 0; font-family: Georgia, serif; margin-top: 2px; }
+    .testi-body  { flex: 1; }
+    .testi p { font-size: .88rem; color: var(--muted); font-style: italic; line-height: 1.65; margin: 0; }
+    .testi .author { margin-top: 10px; font-weight: 700; color: var(--cream); font-size: .78rem; letter-spacing: .04em; }
     .testi .stars  { color: var(--gold); font-size: .8rem; margin-top: 3px; }
 
     /* ── PRECIO ── */
@@ -539,21 +540,27 @@
     <div class="testi-grid">
       <div class="testi">
         <div class="testi-quote">"</div>
-        <p>Hermoso curso, es mi primera vez interpretando cartas y ha sido maravilloso, de mucha transformación y emociones. ¡Súper enamorada de estas cartas! Un gracias enorme, Cate.</p>
-        <div class="author">— Lorena Gutierrez</div>
-        <div class="stars">★★★★★</div>
+        <div class="testi-body">
+          <p>Hermoso curso, es mi primera vez interpretando cartas y ha sido maravilloso, de mucha transformación y emociones. ¡Súper enamorada de estas cartas! Un gracias enorme, Cate.</p>
+          <div class="author">— Lorena Gutierrez</div>
+          <div class="stars">★★★★★</div>
+        </div>
       </div>
       <div class="testi">
         <div class="testi-quote">"</div>
-        <p>Excelente. Me gustó mucho.</p>
-        <div class="author">— Claudia Sanchez</div>
-        <div class="stars">★★★★★</div>
+        <div class="testi-body">
+          <p>Excelente. Me gustó mucho.</p>
+          <div class="author">— Claudia Sanchez</div>
+          <div class="stars">★★★★★</div>
+        </div>
       </div>
       <div class="testi">
         <div class="testi-quote">"</div>
-        <p>Excelente, gracias Cate por tu tiempo, sabiduría, cercanía. ¡Muy enriquecedor!</p>
-        <div class="author">— Sthefanie Cardozo</div>
-        <div class="stars">★★★★★</div>
+        <div class="testi-body">
+          <p>Excelente, gracias Cate por tu tiempo, sabiduría, cercanía. ¡Muy enriquecedor!</p>
+          <div class="author">— Sthefanie Cardozo</div>
+          <div class="stars">★★★★★</div>
+        </div>
       </div>
     </div>
   </div>
